@@ -1,51 +1,4 @@
 {
-    "constants": {
-        "patterns": [
-            {
-                "match": "(nil)(?=(\\s|\\)|\\]|\\}))",
-                "name": "constant.language.nil.clojure"
-            },
-            {
-                "match": "(true|false)",
-                "name": "constant.language.boolean.clojure"
-            },
-            {
-                "match": "(-?\\d+/\\d+)",
-                "name": "constant.numeric.ratio.clojure"
-            },
-            {
-                "match": "(-?\\d+[rR][0-9a-zA-Z]+)",
-                "name": "constant.numeric.arbitrary-radix.clojure"
-            },
-            {
-                "match": "(-?0[xX][0-9a-fA-F]+)",
-                "name": "constant.numeric.hexadecimal.clojure"
-            },
-            {
-                "match": "(-?0\\d+)",
-                "name": "constant.numeric.octal.clojure"
-            },
-            {
-                "match": "(-?\\d+\\.\\d+([eE][+-]?\\d+)?M)",
-                "name": "constant.numeric.bigdecimal.clojure"
-            },
-            {
-                "match": "(-?\\d+\\.\\d+([eE][+-]?\\d+)?)",
-                "name": "constant.numeric.double.clojure"
-            },
-            {
-                "match": "(-?\\d+N)",
-                "name": "constant.numeric.bigint.clojure"
-            },
-            {
-                "match": "(-?\\d+)",
-                "name": "constant.numeric.long.clojure"
-            },
-            {
-                "include": "#keyword"
-            }
-        ]
-    },
     "keyword": {
         "match": "(?<=(\\s|\\(|\\[|\\{)):[a-zA-Z0-9\\#\\.\\-\\_\\:\\+\\=\\>\\<\\/\\!\\?\\*]+(?=(\\s|\\)|\\]|\\}|\\,))",
         "name": "constant.keyword.clojure"
@@ -277,37 +230,6 @@
             },
             {
                 "include": "$self"
-            }
-        ]
-    },
-    "shebang-comment": {
-        "begin": "^(#!)",
-        "beginCaptures": {
-            "1": {
-                "name": "punctuation.definition.comment.shebang.clojure"
-            }
-        },
-        "end": "$",
-        "name": "comment.line.shebang.clojure"
-    },
-    "string": {
-        "begin": "(?<!\\\\)(\")",
-        "beginCaptures": {
-            "1": {
-                "name": "punctuation.definition.string.begin.clojure"
-            }
-        },
-        "end": "(\")",
-        "endCaptures": {
-            "1": {
-                "name": "punctuation.definition.string.end.clojure"
-            }
-        },
-        "name": "string.quoted.double.clojure",
-        "patterns": [
-            {
-                "match": "\\\\.",
-                "name": "constant.character.escape.clojure"
             }
         ]
     },

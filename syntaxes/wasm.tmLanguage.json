@@ -12,6 +12,9 @@
 		},
 		{
 			"include": "#string"
+		},
+		{
+			"include": "#constants"
 		}
 	],
 	"repository": {
@@ -30,21 +33,29 @@
 			"begin": "(?<!\\\\)(\")",
 			"beginCaptures": {
 				"1": {
-					"name": "punctuation.definition.string.begin.clojure"
+					"name": "punctuation.definition.string.begin.wasm"
 				}
 			},
 			"end": "(\")",
 			"endCaptures": {
 				"1": {
-					"name": "punctuation.definition.string.end.clojure"
+					"name": "punctuation.definition.string.end.wasm"
 				}
 			},
 			"patterns": [
 				{
 					"match": "\\\\.",
-					"name": "constant.character.escape.clojure"
+					"name": "constant.character.escape.wasm"
 				}
 			]
-		}
+		},
+		"constants": {
+			"patterns": [
+				{
+					"match": "(-?\\d+)",
+					"name": "constant.numeric.int.wasm"
+				}
+			]
+		},
 	}
 }
