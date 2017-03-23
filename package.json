@@ -1,0 +1,26 @@
+{
+    "name": "vscode-webassembly",
+    "displayName": "vscode-webassembly",
+    "description": "Syntax highlighting for the Webassembly text format",
+    "version": "0.0.1",
+    "publisher": "roblourens",
+    "engines": {
+        "vscode": "^1.5.0"
+    },
+    "categories": [
+        "Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "wasm",
+            "aliases": ["Webassembly", "wasm"],
+            "extensions": [".wat"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "wasm",
+            "scopeName": "source.wasm",
+            "path": "./syntaxes/wasm.tmLanguage.json"
+        }]
+    }
+}
