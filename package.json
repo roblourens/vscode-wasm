@@ -1,7 +1,7 @@
 {
     "name": "vscode-webassembly",
     "displayName": "vscode-webassembly",
-    "description": "Syntax highlighting for the Webassembly text format",
+    "description": "Syntax highlighting for the WebAssembly text format",
     "version": "0.0.1",
     "publisher": "roblourens",
     "engines": {
@@ -13,7 +13,7 @@
     "contributes": {
         "languages": [{
             "id": "wasm",
-            "aliases": ["Webassembly", "wasm"],
+            "aliases": ["WebAssembly", "wasm"],
             "extensions": [".wat"],
             "configuration": "./language-configuration.json"
         }],
